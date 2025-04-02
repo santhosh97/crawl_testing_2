@@ -84,7 +84,7 @@ jobs:
             -v $(pwd)/logs:/app/logs \
             --entrypoint python \
             github-stars-crawler \
-            crawl_pool.py --repos 10000 --workers 16 --batch-size 10000 --clean-db
+            crawl.py --repos 10000 --workers 16 --batch-size 10000 --clean-db
           
           echo "Crawler completed successfully"
       
@@ -203,7 +203,7 @@ jobs:
             -v $(pwd)/logs:/app/logs \
             --entrypoint python \
             github-stars-crawler \
-            crawl_pool.py --repos 10000 --workers 16 --batch-size 10000 --clean-db --max-tokens 5
+            crawl.py --repos 10000 --workers 16 --batch-size 10000 --clean-db --max-tokens 5
           
           echo "Crawler completed successfully"
       
@@ -322,7 +322,7 @@ jobs:
             -v $(pwd)/logs:/app/logs \
             --entrypoint python \
             github-stars-crawler \
-            crawl_pool.py --repos 10000 --workers 16 --batch-size 10000 --clean-db --max-tokens 1
+            crawl.py --repos 10000 --workers 16 --batch-size 10000 --clean-db --max-tokens 1
           
           echo "Crawler completed successfully"
       
